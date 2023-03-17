@@ -1,0 +1,219 @@
+@font-face {
+  font-family: 'Bungee Spice';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/bungeespice/v8/nwpTtK2nIhxE0q-IwgSpZBqCzw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dancingscript/v24/If2cXTr6YS-zF4S-kcSWSVi_sxjsohD9F50Ruu7BMSoHTQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Gloria Hallelujah';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/gloriahallelujah/v17/LYjYdHv3kUk9BMV96EIswT9DIbW-MLSy.ttf) format('truetype');
+}
+body {
+  --google-font-color-bungeespice: none;
+}
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2.5em;
+}
+h3 {
+  font-size: 2em;
+}
+p {
+  font-size: 15pt;
+  justify-content: flex-start;
+}
+a {
+  color: black;
+  justify-content: flex-start;
+}
+.fontOne {
+  font-family: Annai MN, monospace;
+}
+.fontTwo {
+  font-family: Annai MN, monospace;
+}
+.fontThree {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.flexrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.flexcolumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  color: black;
+  font-size: 20pt;
+}
+img {
+  max-width: 250px;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  background-image: url("https://img.freepik.com/premium-vector/seamless-cute-cookies-repeat-brown-background-perfect-wallpaper-backdrop-postcard_565280-407.jpg");
+  color: black;
+}
+body header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+}
+body header nav {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 0;
+  justify-content: flex-start;
+  margin: 1em 0;
+  width: 100%;
+}
+body header nav .site {
+  padding: 0.3em 0;
+  margin: 0 1em;
+  font-size: 1.6em;
+  text-decoration: none;
+  font-family: Annai MN, monospace;
+  color: black;
+  font-size: 35pt;
+}
+body header nav nav {
+  padding: 0 0.75em;
+  margin: 0 auto;
+  background-color: black;
+  height: 100px;
+  justify-content: space-around;
+}
+body header nav nav a {
+  display: block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: white;
+  font-size: 17pt;
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  margin: 0 0 2em 0;
+  min-height: 600px;
+  justify-content: flex-start;
+}
+body main .headUser {
+  align-self: flex-start;
+}
+body main h1 {
+  font-family: Annai MN, monospace;
+  margin: 0 1em;
+}
+body main .photo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+}
+body main .order {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5em;
+  width: 85%;
+}
+body main .order .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+body main .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 95%;
+}
+body main .row .character,
+body main .row .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body main .row .character img,
+body main .row .column img {
+  max-width: 300px;
+}
+body main form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  min-width: 400px;
+}
+body main form section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 2em;
+  justify-content: space-between;
+  min-width: 350px;
+}
+body main form section label {
+  padding: 1em;
+}
+body main form section input {
+  padding: 1em;
+}
+body footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  color: black;
+}
+body footer .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 0;
+  justify-content: flex-start;
+  margin: 1em 0;
+  width: 85%;
+}

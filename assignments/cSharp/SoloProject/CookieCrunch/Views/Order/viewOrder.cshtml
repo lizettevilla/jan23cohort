@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model Order
+<h1>@Model.CookieName</h1>
+<div class="row">
+    <p>@Model.Description</p>
+    <div class="column">
+        @if(@Model.UserId == @Context.Session.GetInt32("uid") ) {
+            <a href="/order/@Model.OrderId/edit">Edit</a>
+             <a href="/order/@Model.OrderId/delete">Delete</a>
+        }
+    </div>
+</div>

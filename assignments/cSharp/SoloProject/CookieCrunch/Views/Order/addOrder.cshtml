@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model Order
+<h1>Add a Cookie</h1>
+<form action="/order/createOrder" method="post">
+<section>
+<label for="CookieName">Cookie Name: </label>
+<input type="text" name="CookieName" id="">
+<span asp-validation-for="CookieName"></span>
+</section>
+<section>
+<label for="Description">Description: </label>
+<input type="text" name="Description"id="">
+<span asp-validation-for="Description"></span>
+<section>
+<label for="Quantity">Quantity: </label>
+<input type="number" name="Quantity" id="">
+<span asp-validation-for="Quantity"></span>
+</section>
+<section>
+<label for="ImgUrl">Cookie Pic: </label>
+<input type="text" name="ImgUrl" id="">
+<span asp-validation-for="ImgUrl"></span>
+</section>
+<button>Add Cookie to Cart</button>
+</form>

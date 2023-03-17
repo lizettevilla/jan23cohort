@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Dancing+Script&family=Gloria+Hallelujah&display=swap');
+h1 {
+    font-size: 3em;
+}
+h2 {
+    font-size: 2.5em;
+}
+h3 {
+    font-size: 2em;
+}
+p {
+    font-size: 1.5em;
+}
+a {
+    font-size: 1em;
+}
+.fontOne {
+    font-family: Annai MN, monospace;
+}
+.fontTwo {
+    font-family: Annai MN, monospace;
+}
+.fontThree {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.flexrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.flexcolumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+a {
+    color: black;
+}
+img {
+    max-width: 400px;
+}
+
+body {
+    .fontThree();
+    .flexcolumn();
+    width: 95%;
+    background-image: url("https://img.freepik.com/premium-vector/seamless-cute-cookies-repeat-brown-background-perfect-wallpaper-backdrop-postcard_565280-407.jpg");
+    color: black;
+    ;
+
+    header {
+        .flexcolumn();
+        width: 95%;
+
+
+        nav {
+            position: relative;
+            .flexrow();
+            padding: .5em 0;
+            justify-content: flex-start;
+            margin: 1em 0;
+            width: 85%;
+
+            .site {
+                padding: .3em 0;
+                margin: 0 1em;
+                font-size: 1.6em;
+                text-decoration: none;
+                .fontTwo();
+                color: white;
+            }
+            nav {
+                padding: 0 .75em;
+                margin: 0 auto;
+                background-color: black;
+                justify-content: space-around;
+
+                a {
+                    display: block;
+                    padding: .5em 1em;
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+        }
+    }
+    main {
+        .flexcolumn();
+        width: 95%;
+        margin: 0 0 2em 0;
+        min-height: 600px;
+        justify-content: flex-start;
+
+        .headUser {
+            align-self: flex-start;
+        }
+
+        h1 {
+            .fontTwo();
+            margin: 0 1em;
+        }
+        .photo {
+            .flexcolumn();
+            margin: 1em;
+        }
+        .order {
+            .flexcolumn();
+            margin: .5em;
+            width: 85%;
+
+            .row {
+                .flexrow();
+                justify-content: space-between;
+            }
+        }
+
+        .row {
+            .flexrow();
+            flex-wrap: wrap;
+            width: 95%;
+
+            .character, .column {
+                .flexcolumn();
+
+                img {
+                    max-width: 300px;
+                }
+            }
+        }
+
+        form {
+            .flexcolumn();
+            width: 50%;
+            min-width: 400px;
+
+            section {
+                .flexrow();
+                padding: .5em 2em;
+                justify-content: space-between;
+                min-width: 350px;
+
+                label {
+                    padding: 1em;
+                }
+                input {
+                    padding: 1em;
+                }
+            }
+        }
+    }
+    footer {
+        .flexrow();
+        width: 95%;
+        // position: absolute;
+        // bottom: 0;
+        // // line-height: 60px;
+        color: black;
+
+        .row {
+            // position: relative;
+            .flexrow();
+            padding: .5em 0;
+            justify-content: flex-start;
+            margin: 1em 0;
+            width: 85%;
+        }
+    }
+}

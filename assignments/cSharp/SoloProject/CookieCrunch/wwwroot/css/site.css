@@ -1,0 +1,20 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-image: url("https://img.freepik.com/premium-vector/seamless-cute-cookies-repeat-brown-background-perfect-wallpaper-backdrop-postcard_565280-407.jpg");
+  background-color: #cccccc;
+   }
