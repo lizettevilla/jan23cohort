@@ -27,8 +27,7 @@ hs_err_pid*
 key.js
 
 # class directories
-*lectures/
-*classProject/
+
 *bin/
 *.csproj
 

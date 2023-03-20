@@ -1,0 +1,13 @@
+@{
+    ViewData["Title"] = "Human Page";
+}
+@model Human
+<h1>@Context.Session.GetString("FirstName")</h1>
+<h2>Above is what is in Session</h2>
+
+// action humanTest looks for the function/route combo in the controller
+<form action="humanTest" method="post">
+    <label asp-for="FirstName"></label>
+    <input asp-for="FirstName">
+    <button>Add Human</button>
+</form>
