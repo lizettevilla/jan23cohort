@@ -1,4 +1,4 @@
-// See https://aka.ms/new-console-template for more information
+﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
 // string data = double quotes any length
 string data01 = "I am a string";
