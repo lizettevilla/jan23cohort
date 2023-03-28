@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+div {
+	border: 10px pink;
+}
+
+h1 {
+	color: #ef8080;
+}
+
+th {
+	font-weight: bold;
+}
+
+tbody {
+	border: 10px solid #ffb6c2;
+}
