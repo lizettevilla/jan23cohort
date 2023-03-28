@@ -23,6 +23,21 @@ public class SinglyLinkedList {
             currentNode.next = newNode;
         }
     }
+
+    public void removeLast() {
+    if (head == null) {
+        return; // list is empty
+    }
+    if (head.next == null) {
+        head = null; // list has only one node
+        return;
+    }
+    Node currentNode = head;
+    while (currentNode.next.next != null) {
+        currentNode = currentNode.next;
+    }
+    currentNode.next = null;
+}
     
     public void display() {
         Node currentNode = head;
