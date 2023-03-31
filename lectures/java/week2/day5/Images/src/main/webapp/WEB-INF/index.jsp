@@ -22,5 +22,32 @@
 	<header>
 		<h1>Hello</h1>
 	</header>
+	<main>
+	<form:form action="/createImg" method="post" modelAttribute="image">
+		<section>
+			<label for="name">Image Name</label>
+			<input type="text" name="name">
+			<form:errors path="name" />
+		</section>
+		<section>
+			<label for="url">Link to Image</label>
+			<input type="text" name="url">
+			<form:errors path="url" />
+		</section>
+		<section>
+			<label for="category">Category</label>
+			<input type="text" name="category">
+			<form:errors path="category" />
+		</section>
+		<button>Add Image</button>
+	</form:form>
+		<c:forEach var="i" items="${ viewImages }">
+			<div>
+				<h3>${ i.name }</h3>
+				<img src="${ i.url }" alt="${ i.name }" />
+				<h3>Category ${ i.category }</h3>
+			</div>
+		</c:forEach>
+	</main>
 </body>
 </html>
