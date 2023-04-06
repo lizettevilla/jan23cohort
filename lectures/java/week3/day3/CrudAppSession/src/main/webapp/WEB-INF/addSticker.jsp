@@ -16,51 +16,43 @@
 <!-- For any Bootstrap that uses JS -->
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 <meta charset="UTF-8">
-<title>Java Grades</title>
+<title>Stickers and Categories</title>
 </head>
 <body>
 	<header>
-		<h1>Java Grades</h1>
+		<h1>Our Stickers and Categories</h1>
 		<nav>
 			<a href="/">Home</a>
-			<a href="/addStudent">Add New Student</a>
+			<a href="/addCategory">Add Category</a>
+			<a href="/addSticker">Add Sticker</a>
+			<a href="/chooseCat">Choose Category</a>
 		</nav>
 	</header>
 	<main>
-		<h1>Add Student</h1>
-		<form:form action="/createStudent" method="post" modelAttribute="studentForm">
+		<form:form action="/createSticker" method="post" modelAttribute="stickerForm">
 			<section>
-				<label for="firstName">First Name</label>
-				<input type="text" name="firstName" />
-				<form:errors path="firstName" class="text-warning"/>
+				<label for="name">Sticker Name</label>
+				<input type="text" name="name" />
+				<form:errors path="name" class="text-warning"/>
 			</section>
 			<section>
-				<label for="lastName">Last Name</label>
-				<input type="text" name="lastName" />
-				<form:errors path="lastName" class="text-warning"/>
+				<label for="url">Image URL</label>
+				<input type="text" name="url" />
+				<form:errors path="url" class="text-warning"/>
 			</section>
 			<section>
-				<label for="age">Age</label>
-				<input type="number" name="age" />
-				<form:errors path="age" class="text-warning"/>
+				<label for="cat">Choose Category</label>
+				<select name="cat" id="">
+					<c:forEach var="c" items="${ allCats }">
+						<option value="${ c.id }">${ c.name }</option>
+					</c:forEach>
+				</select>
 			</section>
-			<section>
-				<label for="studentId">Student ID#</label>
-				<input type="number" name="studentId" />
-				<form:errors path="studentId" class="text-warning"/>						</section>
-			<button>Add Student</button>
+			<button>Add Sticker</button>
 		</form:form>
 	</main>
+	<footer>
+		<h3>Stickers and Categories</h3>
+	</footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
