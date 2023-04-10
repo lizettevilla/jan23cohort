@@ -10,37 +10,37 @@
 <html>
 <head>
 <!-- for Bootstrap CSS -->
-<!-- <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" /> -->
+<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
 <!-- YOUR own local CSS -->
 <link rel="stylesheet" type="text/css" href="/css/style.css">
 <!-- For any Bootstrap that uses JS -->
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 <meta charset="UTF-8">
-<title>Stickers and Categories</title>
+<title>Insert title here</title>
 </head>
 <body>
 	<header>
-		<h1>Our Stickers and Categories</h1>
+		<h1>Hello</h1>
 		<nav>
 			<a href="/">Home</a>
-			<a href="/addCategory">Add Category</a>
-			<a href="/addSticker">Add Sticker</a>
-			<a href="/chooseCat">Choose Category</a>
+			<a href="/dash">Dashboard</a>
+			<a href="/addIcon">Add Icon</a>
+			<a href="/addCat">Add Category</a>
+			<a href="/logout">Logout</a>
 		</nav>
 	</header>
-	<main>
-		<h1><c:out value="${ aCat.name }" /></h1>
-	</main>
-	<footer>
-		<h3>Stickers and Categories</h3>
-		<c:forEach items="${ allStickers }" var="s">
-			<c:if test="${ s.cat.id == aCat.id}">
-				<p>${ s.name }</p>
-			</c:if>
-			<c:if test="${ s.cat.id != aCat.id}">
-				<p>No stickers</p>
-			</c:if>
-		</c:forEach>
-	</footer>
+    <main>
+    	<form:form action="/createCat" method="post" modelAttribute="${ catForm }">
+    		<section>
+    			<label for="name">Name</label>
+    			<input type="text" name="name" id="" />
+    			<form:errors path="name" class="text-danger" />
+    		</section>
+    		<button>AddCat</button>
+    	</form:form>
+    </main>
+    <footer>
+    
+    </footer>
 </body>
 </html>
