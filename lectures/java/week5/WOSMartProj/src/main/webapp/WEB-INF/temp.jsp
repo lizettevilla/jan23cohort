@@ -27,7 +27,7 @@
         <nav-component></nav-component>
 	</header>
     <main>
-        <button class="lg"><a href="/logReg">Join us / Log in</a></button>
+        
     </main>
     <footer>
         <img src="/images/bee.png" alt="">

@@ -19,17 +19,20 @@ import javax.validation.constraints.Size;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-@Table(name="sticks")
-public class Stick {
+@Table(name="links")
+public class Link {
+
     @Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-    @NotBlank(message="Name is required!")
-    @Size(min=3, max=30, message="Name must be between 2 and 30 characters")
-	private String name;
+    @NotBlank(message="Title is required!")
+    @Size(min=3, max=30, message="Title must be between 2 and 30 characters")
+	private String title;
 
-    private String img;
+    @NotBlank(message="Link is required!")
+	private String url;
+
 
     @Column(updatable=false)
 	@DateTimeFormat(pattern = "yyy-MM-DD HH:mm:ss")
@@ -37,24 +40,24 @@ public class Stick {
 	
 	@DateTimeFormat(pattern = "yyy-MM-DD HH:mm:ss")
 	private Date updatedAt;
-
-
+	
+	
     // ==========================
     //        RELATIONSHIPS
     // ==========================
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="user_id")
-	private User stickOwner;
+	private User linkOwner;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="category_id")
-	private Category stickCat;
+	private Category linkCat;
 	
     // ==========================
     //        CONSTRUCTOR
     // ==========================
-    public Stick() {}
+    public Link() {}
 
 	// ==========================
     //     GETTERS / SETTERS
@@ -63,7 +66,12 @@ public class Stick {
     protected void onCreate() {
         this.createdAt = new Date();
     }
-    public Long getId() {
+    @PreUpdate
+    protected void onUpdate() {
+        this.updatedAt = new Date();
+    }
+
+	public Long getId() {
 		return id;
 	}
 
@@ -71,12 +79,20 @@ public class Stick {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getTitle() {
+		return title;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
 	}
 
 	public Date getCreatedAt() {
@@ -95,35 +111,20 @@ public class Stick {
 		this.updatedAt = updatedAt;
 	}
 
-	public User getStickOwner() {
-		return stickOwner;
+	public User getLinkOwner() {
+		return linkOwner;
 	}
 
-	public void setStickOwner(User stickOwner) {
-		this.stickOwner = stickOwner;
+	public void setLinkOwner(User linkOwner) {
+		this.linkOwner = linkOwner;
 	}
 
-
-	@PreUpdate
-    protected void onUpdate() {
-        this.updatedAt = new Date();
-    }
-
-	public String getImg() {
-		return img;
+	public Category getLinkCat() {
+		return linkCat;
 	}
 
-	public void setImg(String img) {
-		this.img = img;
+	public void setLinkCat(Category linkCat) {
+		this.linkCat = linkCat;
 	}
-
-	public Category getStickCat() {
-		return stickCat;
-	}
-
-	public void setStickCat(Category stickCat) {
-		this.stickCat = stickCat;
-	}
-    
     
 }

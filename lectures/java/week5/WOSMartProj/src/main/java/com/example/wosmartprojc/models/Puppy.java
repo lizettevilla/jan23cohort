@@ -33,6 +33,8 @@ public class Puppy {
 	@NotBlank(message="Breed is required!")
     @Size(min=3, max=30, message="Breed must be between 3 and 30 characters")
 	private String breed;
+
+	private String img;
 	
 	@Column(updatable=false)
 	@DateTimeFormat(pattern = "yyy-MM-DD HH:mm:ss")
@@ -51,7 +53,7 @@ public class Puppy {
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="category_id")
-	private User pupCat;
+	private Category pupCat;
 
     // ==========================
     //        CONSTRUCTOR
@@ -118,12 +120,21 @@ public class Puppy {
 		this.pupOwner = pupOwner;
 	}
 
-	public User getPupCat() {
+	public String getImg() {
+		return img;
+	}
+
+	public void setImg(String img) {
+		this.img = img;
+	}
+
+	public Category getPupCat() {
 		return pupCat;
 	}
 
-	public void setPupCat(User pupCat) {
+	public void setPupCat(Category pupCat) {
 		this.pupCat = pupCat;
 	}
     
+	
 }

@@ -2,6 +2,9 @@
 
 @gray: #000000;
 @pink: #eb44a5;
+@border: #44e0eb;
+@tablebg: #8a005e;
+@font: #fff;
 
 
 .flexrow {
@@ -21,6 +24,30 @@
     border: 2px groove @pink;
     // background-color: @green;
     box-shadow: .10em .25em .75em @pink;
+}
+table, tr, th, td {
+    border: 3px double @border;
+    text-align: center;
+    background-color: @tablebg;
+    color: @font;
+    background-image: url("https://www.transparenttextures.com/patterns/gray-floral.png");
+    // width: 85%;
+    padding: 1em;
+    margin: 1em;
+}
+table {
+    tr {
+        td {
+            img {
+                max-width: 200px;
+            }
+        }
+    }
+}
+
+a {
+    color: @font;
+    text-decoration: none;
 }
 
 body {
@@ -53,6 +80,23 @@ body {
             color: @pink;
             margin: 2em 1em 1em;
             padding: 1em;
+        }
+
+        .row {
+            .flexrow();
+            flex-wrap: wrap;
+            width: 100%;
+
+            .column {
+                .flexcolumn();
+                border: 1px @border solid;
+                padding: 1em;
+                margin: 1em;
+
+                img {
+                    max-width: 250px;
+                }
+            }
         }
     }
     footer {

@@ -59,6 +59,9 @@ public class Category {
 	@OneToMany(mappedBy="stickCat", fetch = FetchType.LAZY)
 	private List<Stick> catStick;
 	
+	@OneToMany(mappedBy="linkCat", fetch = FetchType.LAZY)
+	private List<Link> catLink;
+	
     // ==========================
     //        CONSTRUCTOR
     // ==========================
@@ -147,6 +150,14 @@ public class Category {
 
 	public void setCatStick(List<Stick> catStick) {
 		this.catStick = catStick;
+	}
+
+	public List<Link> getCatLink() {
+		return catLink;
+	}
+
+	public void setCatLink(List<Link> catLink) {
+		this.catLink = catLink;
 	}
 
 	

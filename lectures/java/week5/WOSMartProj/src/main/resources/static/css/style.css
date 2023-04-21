@@ -15,6 +15,25 @@
   border: 2px groove #eb44a5;
   box-shadow: 0.1em 0.25em 0.75em #eb44a5;
 }
+table,
+tr,
+th,
+td {
+  border: 3px double #44e0eb;
+  text-align: center;
+  background-color: #8a005e;
+  color: #fff;
+  background-image: url("https://www.transparenttextures.com/patterns/gray-floral.png");
+  padding: 1em;
+  margin: 1em;
+}
+table tr td img {
+  max-width: 200px;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
 body {
   display: flex;
   flex-direction: column;
@@ -58,6 +77,26 @@ body main .lg {
   color: #eb44a5;
   margin: 2em 1em 1em;
   padding: 1em;
+}
+body main .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+body main .row .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px #44e0eb solid;
+  padding: 1em;
+  margin: 1em;
+}
+body main .row .column img {
+  max-width: 250px;
 }
 body footer {
   display: flex;

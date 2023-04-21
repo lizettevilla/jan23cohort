@@ -45,7 +45,7 @@ public class UserServ {
     public User login(LoginUser newLogin, BindingResult result) {
         Optional<User> potentialUser = userRepo.findByUsername(newLogin.getUsername());
         if(!potentialUser.isPresent()) {
-            result.rejectValue("email", "Unique", "Unknown email!");
+            result.rejectValue("username", "Unique", "Unknown username!");
             return null;
         }
         User user = potentialUser.get();

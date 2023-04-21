@@ -30,7 +30,7 @@ public class Squish {
     @Size(min=3, max=30, message="Name must be between 2 and 30 characters")
 	private String name;
 
-
+    private String img;
 
     @Column(updatable=false)
 	@DateTimeFormat(pattern = "yyy-MM-DD HH:mm:ss")
@@ -50,7 +50,7 @@ public class Squish {
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="category_id")
-	private User squishCat;
+	private Category squishCat;
 	
     // ==========================
     //        CONSTRUCTOR
@@ -109,12 +109,21 @@ public class Squish {
 		this.squishOwner = squishOwner;
 	}
 
-	public User getSquishCat() {
+	public String getImg() {
+		return img;
+	}
+
+	public void setImg(String img) {
+		this.img = img;
+	}
+
+	public Category getSquishCat() {
 		return squishCat;
 	}
 
-	public void setSquishCat(User squishCat) {
+	public void setSquishCat(Category squishCat) {
 		this.squishCat = squishCat;
 	}
+	
     
 }

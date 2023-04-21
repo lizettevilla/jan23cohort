@@ -82,6 +82,9 @@ public class User {
 	@OneToMany(mappedBy="stickOwner", fetch = FetchType.LAZY)
 	private List<Stick> stick;
 	
+	@OneToMany(mappedBy="linkOwner", fetch = FetchType.LAZY)
+	private List<Link> link;
+	
 	
     // ==========================
     //        CONSTRUCTOR
@@ -218,6 +221,14 @@ public class User {
 
 	public void setStick(List<Stick> stick) {
 		this.stick = stick;
+	}
+
+	public List<Link> getLink() {
+		return link;
+	}
+
+	public void setLink(List<Link> link) {
+		this.link = link;
 	}
     
     
