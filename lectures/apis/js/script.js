@@ -14,7 +14,7 @@ var cSharpAPI = 'https://localhost:7001/api/Animal'
 // getCSharp()
 
 function getCSharp() {
-    fetch('https://localhost:7001/api/Animal')
+    fetch('http://localhost:8080/api/')
     .then(response => response.json())
     .then(data => {
         console.log(data)
